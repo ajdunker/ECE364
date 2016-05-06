@@ -1,0 +1,3 @@
+echo "Hey/n"
+echo "$0/n"
+exit 0

@@ -1,0 +1,37 @@
+#! /usr/bin/env python3.4
+#
+# $Author$
+# $Date$
+# $HeadURL$
+# $Revision$
+
+import math
+
+
+def find_median(list1, list2):
+    Sorted_List = list1 + list2
+    Sorted_List.sort()
+    if(len(Sorted_List) % 2 == 0):
+        Median = Sorted_List[math.floor((len(Sorted_List) - 1) / 2)]
+    else:
+        Median = Sorted_List[math.trunc(len(Sorted_List) / 2)]
+    return Median, Sorted_List
+
+
+def main():
+    first = input("Enter the first list of numbers: ")
+    second = input("Enter the second list of numbers: ")
+
+    list1 = list(map(int, first.split()))
+    list2 = list(map(int, second.split()))
+
+    print("First list: {}".format(list1))
+    print("Second list: {}".format(list2))
+
+    (Median, Sorted_List) = find_median(list1, list2)
+
+    print("Merged list: {}".format(Sorted_List))
+    print("Median: {}".format(Median))
+
+if __name__ == "__main__":
+    main()

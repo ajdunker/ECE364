@@ -1,0 +1,3 @@
+echo "Hey"
+echo "$0"
+exit 0
